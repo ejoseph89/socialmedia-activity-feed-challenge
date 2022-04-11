@@ -1,0 +1,15 @@
+{
+  "name": "social-media-news-feed-challenge",
+  "version": "1.0.0",
+  "description": "Code challenge for Helcim's UX Developer position. An activity feed where users can make text and/or image posts. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emil Joseph",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.50.0"
+  }
+}
