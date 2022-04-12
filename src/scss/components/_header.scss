@@ -78,17 +78,19 @@
   
   // Profile button
   #{&}__profile--btn {
-    font-size: rem(23);
-    color: $accent-color;
+    font-size: rem(20);
+    color: $black;
 
     @include flexCenter(row);
 
-    padding: rem(5);
+    padding: rem(10);
     border-radius: 50%;
-    border: 1px solid $accent-color;
+    border: 1px solid $black;
 
     &:hover {
       cursor: pointer;
+      color: $accent-color;
+      border-color: $accent-color;
     }
   }
 

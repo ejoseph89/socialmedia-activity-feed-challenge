@@ -1,4 +1,5 @@
 @use '../base/helpers' as *;
+@use '../base/variables' as *;
 
 .content {
   // border: 1px solid green;
@@ -20,4 +21,80 @@
     width: 90%;
     margin: 0 auto;
   }
+
+
+  // Post Modal
+  #{&}__post {
+    position: fixed;
+    bottom: rem(60);
+    left: 50%;
+
+    background: $white;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+    margin: rem(20) auto;
+    border: 1px solid $black;
+    border-radius: rem(5);
+  }
+
+  #{&}__post--text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: rem(20);
+
+    button {
+      border: 1px solid $black;
+      border-radius: 50%;
+      padding: rem(10);
+      margin-right: rem(10);
+      background: transparent;
+
+      
+
+      @include flexCenter(row);
+
+      font-size: rem(20);
+    }
+
+    form input {
+      width: rem(300);
+      max-width: 90%;
+      flex: 1;
+
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+
+  #{&}__post--media {
+    border-top: 1px solid $light-grey;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: rem(20);
+
+    section {
+      display: flex;
+
+      div {
+        margin-right: rem(30);
+
+        font-size: rem(25);
+      }
+    }
+
+    button {
+      padding: rem(10) rem(30);
+      font-size: rem(16);
+    }
+  }
+
 }
+
