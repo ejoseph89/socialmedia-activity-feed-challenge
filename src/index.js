@@ -29,7 +29,7 @@ class UI {
       {
         id: 3,
         user: 'user2',
-        text: 'Coffee!!!!!',
+        text: 'Holy shit!!!!!',
         imageFile: 'https://images.unsplash.com/photo-1649716729285-689bee1d47de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'
       },
     ]
@@ -49,7 +49,8 @@ class UI {
           <button>
             <i class="fa-solid fa-user"></i>
           </button>
-          <span>${post.user} </span> posted on Date
+          <span> <p class="post__username">${post.user}</p> </span> 
+          <span class="post__date" >posted on ${'Date'}</span>
         </div>
         <button class="postEdit">
           <i class="fa-solid fa-ellipsis"></i>

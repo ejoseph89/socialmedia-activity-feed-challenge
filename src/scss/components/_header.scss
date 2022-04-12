@@ -50,15 +50,15 @@
     position: relative;
     
     input {
-      height: 40px;
+      height: rem(40);
       width: rem(250);
       padding: rem(7);
       padding-left: rem(40);
 
-      border-radius: rem(5);
-      border: none;
+      border-radius: rem(7);
+      border: rem(1) solid $lighter-grey;
       outline: none;
-      background: $lighter-grey;
+      background: $white;
 
       color: $black;
       font-size: rem(14);
@@ -71,7 +71,7 @@
       left: rem(10);
 
       font-size: rem(20);
-      -webkit-text-stroke: 1px $lighter-grey;
+      -webkit-text-stroke: 2px $white;
       color: $light-grey;
     }
   }
