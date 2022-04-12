@@ -17,7 +17,7 @@ class UI {
       {
         id: 1,
         user: 'user1',
-        text: 'Post One. Hello World.',
+        text: 'Post One. Hello World. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
         imageFile: ''
       },
       {
@@ -61,13 +61,13 @@ class UI {
         ${post.imageFile && `<img src=${post.imageFile} >`}
       </div>
       <div class="postFooter">
-        <button>
+        <button class="post__like">
           <i class="fa-solid fa-heart"></i>
         </button>
-        <button>
+        <button class="post__comment">
           <i class="fa-solid fa-comment-dots"></i>
         </button>
-        <button>
+        <button  class="post__share">
           <i class="fa-solid fa-share-nodes"></i>
         </button>
       </div>
