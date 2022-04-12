@@ -122,7 +122,7 @@
   // Post Modal
   #{&}__post {
     position: fixed;
-    bottom: rem(60);
+    bottom: rem(59);
     left: 50%;
 
     background: $white;
@@ -132,8 +132,9 @@
     width: 100%;
     margin: rem(20) auto;
     margin-bottom: 0;
-    border: 1px solid $lighter-grey;
-    border-radius: rem(5);
+    border-top: rem(5) solid $accent-color;
+    border-top-left-radius: rem(20);
+    border-top-right-radius: rem(20);
   }
 
   #{&}__post--text {
@@ -144,17 +145,22 @@
     padding: rem(20);
 
     button {
-      border: 1px solid $black;
+      border: rem(2) solid $accent-tertiary;
       border-radius: 50%;
-      padding: rem(10);
+      // padding: rem(10);
+      width: rem(40);
       margin-right: rem(10);
-      background: transparent;
+      overflow: hidden;
 
       
 
       @include flexCenter(row);
 
       font-size: rem(20);
+
+      img {
+        width: 100%;
+      }
     }
 
     form input {
@@ -191,7 +197,16 @@
 
     button {
       padding: rem(10) rem(30);
+
       font-size: rem(16);
+      color: $white;
+      background: $accent-secondary;
+      border: none;
+      border-radius: rem(7);
+
+      &:hover {
+        background: $accent-tertiary;
+      }
     }
   }
 

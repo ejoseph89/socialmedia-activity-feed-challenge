@@ -1,7 +1,8 @@
 @use './variables' as *;
 
 body,
-input {
+input,
+button {
   font-family: $primary-font;
 }
 

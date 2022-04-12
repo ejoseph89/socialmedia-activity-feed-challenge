@@ -78,14 +78,21 @@
   
   // Profile button
   #{&}__profile--btn {
-    font-size: rem(20);
+    // font-size: rem(20);
     color: $accent-color;
 
     @include flexCenter(row);
 
-    padding: rem(10);
+    // padding: rem(10);
     border-radius: 50%;
-    border: 1px solid $accent-color;
+    border: 2px solid $accent-color;
+    width: rem(40);
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
 
     &:hover {
       cursor: pointer;
