@@ -48,17 +48,23 @@
       justify-content: space-between;
 
       &__details {
-        display: flex;
-        align-items: center;
-
+        
+        &--user {
+          display: flex;
+        }
+        
         button {
           margin-right: rem(10);
           background: transparent;
-          border: 1px solid $black;
+          border: 1px solid $accent-color;
           border-radius: 50%;
 
           @include flexCenter(row);
           padding: rem(5);
+
+          &:hover {
+            border-color: $accent-secondary;
+          }
 
         }
         span {
@@ -161,12 +167,17 @@
       img {
         width: 100%;
       }
+
+      &:hover {
+        border-color: $accent-secondary;
+      }
     }
 
     form input {
       width: rem(300);
       max-width: 90%;
       flex: 1;
+      font-size: rem(14);
 
       background: transparent;
       border: none;
@@ -189,13 +200,17 @@
       color: $accent-tertiary;
 
       div {
-        margin-right: rem(30);
-
+        margin-right: rem(40);
         font-size: rem(25);
+
+        &:hover {
+          cursor: pointer;
+          color: $accent-secondary;
+        }
       }
     }
 
-    button {
+    input[type="submit"] {
       padding: rem(10) rem(30);
 
       font-size: rem(16);
@@ -206,8 +221,12 @@
 
       &:hover {
         background: $accent-tertiary;
+        cursor: pointer;
       }
+
+      
     }
+
   }
 
 }

@@ -57,8 +57,8 @@
           <!-- <i class="fa-solid fa-user"></i> -->
           <img src="./assets/images/profile-pic.jpg" alt="">
         </button>
-        <form action="">
-          <input type="text" placeholder="Share your thoughts . . . . .">
+        <form id="post-form">
+          <input id="post-text" type="text" placeholder="Share your thoughts . . . . .">
         </form>
       </div>
       <div class="content__post--media">
@@ -76,7 +76,7 @@
             <i class="fa-solid fa-face-grin"></i>
           </div>
         </section>
-        <button>Post</button>
+        <input id="submitPostBtn" type="submit" form="post-form" value="Post" class="disabled" />
       </div>
     </section>
   </main>
