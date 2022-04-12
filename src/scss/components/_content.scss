@@ -1,9 +1,11 @@
+@use '../base/helpers' as *;
+
 .content {
   border: 1px solid green;
 
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: rem(75 + 65);
+  margin-bottom: rem(60);
 
   flex: 1;
 
@@ -11,7 +13,7 @@
 
   #{&}__block--title {
     text-align: center;
-    padding: 15px;
+    padding: rem(15);
   }
 
   #{&}__block--text {

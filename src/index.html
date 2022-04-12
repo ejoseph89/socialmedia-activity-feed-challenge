@@ -8,15 +8,42 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600&display=swap" rel="stylesheet">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Stylesheet -->
   <link rel="stylesheet" href="./scss/main.scss">
   <title>Document</title>
 </head>
 <body>
-  <header class="header">
-    header
-  </header>
 
+  <!-- Header -->
+  <header class="header">
+    <div class="header__nav--btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="header__search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <form>
+        <label for="search" hidden>Search for firends, posts, or live</label>
+        <input type="text" id="search" placeholder="Search">
+      </form>
+    </div>
+    <div class="header__profile--btn">
+      <i class="fa-solid fa-user"></i>
+    </div>
+  </header>
+  
+  <!-- @todo: make navigation hide on scroll event on main content -->
+  <!-- Quick navigation -->
+  <nav class="navigation">
+    <ul>
+      <li class="current"> <a href="">home</a> </li>
+      <li> <a href="">trending</a> </li>
+      <li> <a href="">live</a> </li>
+    </ul>
+  </nav>
+  
+  <!-- Main content -->
   <main class="content">
     <h1 class="content__block--title">Main</h1>
     <div class="content__block--text">
@@ -39,6 +66,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     footer
   </footer>

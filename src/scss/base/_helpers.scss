@@ -5,7 +5,7 @@
 
 // Functions
 @function weight($weight-name) {
-  @return map-get($font-weights, $weight-name);
+  @return map.get($font-weights, $weight-name);
 }
 
 @function rem($value) {
