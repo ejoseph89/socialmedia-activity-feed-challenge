@@ -35,7 +35,7 @@
 
     width: 90%;
     margin: rem(20) auto;
-    border: 1px solid $black;
+    border: 1px solid $lighter-grey;
     border-radius: rem(5);
   }
 
@@ -72,7 +72,7 @@
   }
 
   #{&}__post--media {
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $lighter-grey;
 
     display: flex;
     justify-content: space-between;

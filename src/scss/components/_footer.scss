@@ -5,7 +5,7 @@
   position: fixed;
   bottom: 0;
   
-  background: $lighter-grey;
+  background: $white;
 
   width: 100%;
   min-height: rem(60);
@@ -21,21 +21,22 @@
 
     i {
       font-size: rem(23);
-      color: $black;
+      color: $accent-color;
     }
 
     &:hover {
       cursor: pointer;
 
       i {
-        color: $accent-color;
-
-        // &:active {
-        //   color: $accent-color;
-        // }
+        color: $accent-secondary;
       }
     }
 
+    &:active {
+      color: $accent-secondary;
+    }
+
   }
+
 }
 

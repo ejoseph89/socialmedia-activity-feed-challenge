@@ -27,7 +27,7 @@
   // Hamburger icon
   #{&}__nav--btn {
     font-size: rem(23);
-    color: $black;
+    color: $accent-color;
     -webkit-text-stroke: 1px $white;
 
     border: none;
@@ -40,7 +40,7 @@
 
     i {
       &:hover {
-        color: $accent-color;
+        color: $accent-secondary;
       }
     }
   }
@@ -60,7 +60,7 @@
       outline: none;
       background: $lighter-grey;
 
-      color: $light-grey;
+      color: $black;
       font-size: rem(14);
       font-weight: 200;
     }
@@ -79,18 +79,17 @@
   // Profile button
   #{&}__profile--btn {
     font-size: rem(20);
-    color: $black;
+    color: $accent-color;
 
     @include flexCenter(row);
 
     padding: rem(10);
     border-radius: 50%;
-    border: 1px solid $black;
+    border: 1px solid $accent-color;
 
     &:hover {
       cursor: pointer;
-      color: $accent-color;
-      border-color: $accent-color;
+      border-color: $accent-secondary;
     }
   }
 
@@ -121,19 +120,17 @@
     @include flexCenter(row);
     justify-content: space-around;
 
-    li a {
-      color: $black;
-      font-weight: 400;
-
-      &:hover {
-        color: $accent-color;
-      }
-    }
-
     li {
-      &:first-child {
+      
+      a {
         color: $accent-color;
       }
     }
+
+    .current > * {
+      color: $accent-secondary;
+    }
+
+    
   }
 }

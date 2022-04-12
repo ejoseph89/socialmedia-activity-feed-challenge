@@ -5,3 +5,4 @@ const openPostModal = document.querySelector('.footer__nav--post')
 openPostModal.addEventListener('click', (e) => {
   postModal.classList.toggle('hidden')
 })
+
