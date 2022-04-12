@@ -18,9 +18,9 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="header__nav--btn">
+    <button class="header__nav--btn">
       <i class="fa-solid fa-bars"></i>
-    </div>
+    </button>
     <div class="header__search">
       <i class="fa-solid fa-magnifying-glass"></i>
       <form>
@@ -28,20 +28,20 @@
         <input type="text" id="search" placeholder="Search">
       </form>
     </div>
-    <div class="header__profile--btn">
+    <button class="header__profile--btn">
       <i class="fa-solid fa-user"></i>
-    </div>
+    </button>
+    <!-- @todo: make navigation hide on scroll event on main content -->
+    <!-- Quick navigation -->
+    <nav class="navigation">
+      <ul>
+        <li class="current"> <a href="#">home</a> </li>
+        <li> <a href="#">trending</a> </li>
+        <li> <a href="#">live</a> </li>
+      </ul>
+    </nav>
   </header>
   
-  <!-- @todo: make navigation hide on scroll event on main content -->
-  <!-- Quick navigation -->
-  <nav class="navigation">
-    <ul>
-      <li class="current"> <a href="">home</a> </li>
-      <li> <a href="">trending</a> </li>
-      <li> <a href="">live</a> </li>
-    </ul>
-  </nav>
   
   <!-- Main content -->
   <main class="content">
@@ -68,7 +68,18 @@
 
   <!-- Footer -->
   <footer class="footer">
-    footer
+    <a class="footer__nav--home">
+      <i class="fa-solid fa-house-chimney"></i>
+    </a>
+    <button class="footer__nav--post">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <a class="footer__nav--messages">
+      <i class="fa-solid fa-message"></i>
+    </a>
+    <a class="footer__nav--notifications">
+      <i class="fa-solid fa-bell"></i>
+    </a>
   </footer>
 
   <script src="./index.js"></script>

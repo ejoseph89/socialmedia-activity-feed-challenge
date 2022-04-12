@@ -1,13 +1,41 @@
 @use '../base/helpers' as *;
+@use '../base/variables' as *;
 
 .footer {
   position: fixed;
   bottom: 0;
-
-  border: 1px solid blue;
   
-  background: #fff;
+  background: $lighter-grey;
 
   width: 100%;
   min-height: rem(60);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button,
+  a {
+    border: none;
+    background: transparent;
+
+    i {
+      font-size: rem(23);
+      color: $black;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      i {
+        color: $accent-color;
+
+        &:active {
+          color: $accent-color;
+        }
+      }
+    }
+
+  }
 }
+
