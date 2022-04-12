@@ -1,0 +1,21 @@
+.content {
+  border: 1px solid green;
+
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  flex: 1;
+
+  overflow: auto;
+
+  #{&}__block--title {
+    text-align: center;
+    padding: 15px;
+  }
+
+  #{&}__block--text {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

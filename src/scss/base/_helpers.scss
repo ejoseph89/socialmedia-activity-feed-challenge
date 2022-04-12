@@ -1,0 +1,30 @@
+@use './variables' as *;
+@use 'sass:math';
+
+
+
+// Functions
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@function rem($value) {
+  @return math.div($value, 16) * 1rem;
+}
+
+
+
+// Mixins
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: $white;
+    color: $black;
+  }
+}
