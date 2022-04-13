@@ -57,7 +57,10 @@
           <textarea id="post-text" type="text" placeholder="Share your thoughts..." rows="5" cols="40"></textarea>
           <div class="post-form-control">
             <label for="image-file">Share an Image <i class="fa-solid fa-image"></i></label>
-            <input type="file" name="" id="image-file" hidden accept=""image/*>
+            <input type="file" name="" id="image-file" hidden accept="image/*">
+          </div>
+          <div class="preview-container">
+            <img src="" alt="" class="preview-image">
           </div>
           <input id="submitPostBtn" type="submit" form="post-form" value="Post" class="submitPostBtn" />
         </form>

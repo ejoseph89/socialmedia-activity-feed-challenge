@@ -169,6 +169,12 @@
         }
       }
 
+      .preview-container {
+        img {
+          width: 150px
+        }
+      }
+
       .submitPostBtn {
         padding: rem(7);
         background: $accent-color;
@@ -178,6 +184,7 @@
 
         &:hover {
           background-color: $accent-secondary;
+          cursor: pointer;
         }
 
         &:disabled {
