@@ -28,10 +28,13 @@ postBtn.addEventListener('click', (e) => {
 // Post input check: making sure input is filled before post sumbmission
 postBtn.disabled = true
 document.querySelector('#post-text').addEventListener('input', (e) => {
-  postBtn.disabled = false
+  if(e.target.value.length > 0) {
+    postBtn.disabled = false
+  } else {
+    postBtn.disabled = true
+  }
 })
 document.querySelector('#post-form').addEventListener('change', (e) => {
-  console.log(e);
   postBtn.disabled = false
 })
 
@@ -42,12 +45,30 @@ document.querySelector('#post-form').addEventListener('change', (e) => {
 const uploadedImageInput = document.querySelector('#image-file')
 const postForm = document.querySelector('#post-form')
 const previewContainer = document.querySelector('.preview-container')
-const previewImage = previewContainer.querySelector('.preview-image')
 
 uploadedImageInput.addEventListener('change', (e) => {
-  const file = e.target.files[0]
-  console.log(file);
+  // const file = e.target.files[0]
+
+  if(!uploadedImageInput.value.length) {
+    return
+  }
+
+  let reader = new FileReader()
+
+  reader.onload = logFile
+
+  reader.readAsDataURL(uploadedImageInput.files[0])
+  
 })
+
+let str
+function logFile(event) {
+  str = event.target.result
+  // let newImg = document.createElement('img')
+  // newImg.src = str
+  // previewContainer.appendChild(newImg)
+  return str
+}
 
 
 
@@ -164,7 +185,7 @@ document.querySelector('#post-form').addEventListener('submit', (e) => {
 
 
   // New post object
-  const post = new Post(id = 1, user = 'emiljoseph', text, imageFile='', postDate = currentDate)
+  const post = new Post(id = 1, user = 'emiljoseph', text, imageFile=str, postDate = currentDate)
 
 
 
