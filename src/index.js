@@ -26,10 +26,14 @@ postBtn.addEventListener('click', (e) => {
 })
 
 // Post input check: making sure input is filled before post sumbmission
-// postBtn.disabled = true
-// document.querySelector('#post-text').addEventListener('keypress', (e) => {
-//   postBtn.disabled = false
-// })
+postBtn.disabled = true
+document.querySelector('#post-text').addEventListener('input', (e) => {
+  postBtn.disabled = false
+})
+document.querySelector('#post-form').addEventListener('change', (e) => {
+  console.log(e);
+  postBtn.disabled = false
+})
 
 
 
@@ -40,19 +44,9 @@ const postForm = document.querySelector('#post-form')
 const previewContainer = document.querySelector('.preview-container')
 const previewImage = previewContainer.querySelector('.preview-image')
 
-uploadedImageInput.addEventListener('change', function(e) {
-  const file = this.files[0]
-
-  if(file) {
-    const reader = new FileReader()
-
-    reader.addEventListener('load', function() {
-      console.log(this.result)
-    })
-
-    reader.readAsDataURL(file)
-  }
-
+uploadedImageInput.addEventListener('change', (e) => {
+  const file = e.target.files[0]
+  console.log(file);
 })
 
 
@@ -180,7 +174,7 @@ document.querySelector('#post-form').addEventListener('submit', (e) => {
   // } else {
     UI.addPostToList(post)
     postInput.value = ''
-    // postBtn.disabled = true
+    postBtn.disabled = true
   // }
 })
 
