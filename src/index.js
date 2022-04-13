@@ -14,6 +14,7 @@ const currentDate = `${month} ${day}, ${year}`
 const postModal = document.querySelector('.content__post')
 const openPostModal = document.querySelector('.footer__nav--post')
 const postBtn = document.querySelector('#submitPostBtn')
+const cancelPostBtn = document.querySelector('.cancel-post')
 
 
 const toggleModal = () => {
@@ -23,6 +24,11 @@ openPostModal.addEventListener('click', toggleModal)
 postBtn.addEventListener('click', (e) => {
   postModal.classList.add('hidden')
   
+})
+cancelPostBtn.addEventListener('click', (e) => {
+  postModal.classList.add('hidden')
+  const mainContent = document.querySelector('.content')
+  mainContent.scrollTo(0, 0)
 })
 
 // Post input check: making sure input is filled before post sumbmission
@@ -45,11 +51,19 @@ document.querySelector('#post-form').addEventListener('change', (e) => {
 const uploadedImageInput = document.querySelector('#image-file')
 const postForm = document.querySelector('#post-form')
 const previewContainer = document.querySelector('.preview-container')
+const uploadSuccessMsg = document.querySelector('.upload-success')
+const cancelUpload = document.querySelector('.upload-cancel')
 
 uploadedImageInput.addEventListener('change', (e) => {
   // const file = e.target.files[0]
-
+  
+  uploadSuccessMsg.classList.remove('hidden')
+  // setTimeout(() => {
+  //   uploadSuccessMsg.classList.add('hidden')
+  // }, 2500);
+  cancelUpload.classList.remove('hidden')
   if(!uploadedImageInput.value.length) {
+    uploadSuccessMsg.classList.add('hidden')
     return
   }
 
@@ -94,7 +108,7 @@ class UI {
       {
         id: 1,
         user: 'user1',
-        text: 'Post One. Hello World. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+        text: 'The creation of something new is not accomplished by the intellect but by the play instinct acting from inner necessity. The creative mind plays with the objects it loves. - Carl Jung',
         imageFile: '',
         postDate: 'April 1, 2021'
       },
@@ -108,7 +122,7 @@ class UI {
       {
         id: 3,
         user: 'user2',
-        text: 'Holy shit!!!!!',
+        text: 'Whoa',
         imageFile: 'https://images.unsplash.com/photo-1649716729285-689bee1d47de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80',
         postDate: 'April 7, 2021'
       },
@@ -164,6 +178,7 @@ class UI {
       </div>
     `
     postList.prepend(postItem)
+    uploadSuccessMsg.classList.add('hidden')
   }
 }
 
@@ -197,6 +212,9 @@ document.querySelector('#post-form').addEventListener('submit', (e) => {
     postInput.value = ''
     str = ''
     postBtn.disabled = true
+    cancelUpload.classList.add('hidden')
+    const mainContent = document.querySelector('.content')
+    mainContent.scrollTo(0, 0)
   // }
 })
 

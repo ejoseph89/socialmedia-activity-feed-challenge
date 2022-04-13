@@ -125,7 +125,7 @@
     transform: translateX(-50%);
 
     width: 100%;
-    padding-top: rem(7);
+    padding-top: rem(10);
     margin: rem(20) auto;
     margin-bottom: 0;
     border-top: rem(5) solid $accent-color;
@@ -135,7 +135,7 @@
 
   #{&}__post--text-img {
     #post-form {
-      height: rem(200);
+      height: rem(250);
 
       display: flex;
       flex-direction: column;
@@ -170,30 +170,61 @@
             margin-left: rem(10);
           }
         }
-      }
 
-      .preview-container {
-        img {
-          width: 150px
+        .upload-notifications {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: rem(10) 0;
+        }
+
+        .upload-success,
+        .upload-cancel {
+          color: $accent-secondary;
+
+          i {
+            margin-left: rem(5);
+          }
+        }
+
+        .upload-cancel {
+          color: $accent-tertiary;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
 
-      .submitPostBtn {
-        padding: rem(7);
-        background: $accent-color;
-        color: $white;
-        border: none;
-        border-radius: rem(5);
-
-        &:hover {
-          background-color: $accent-secondary;
-          cursor: pointer;
-        }
-
-        &:disabled {
+      .upload-btns {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        .submitPostBtn,
+        .cancel-post {
+          width: 40%;
+          padding: rem(7) rem(14);
+          background: $accent-color;
           color: $white;
-          background: $light-grey;
-          cursor: not-allowed;
+          border: none;
+          border-radius: rem(5);
+  
+          &:hover {
+            background-color: $accent-secondary;
+            cursor: pointer;
+          }
+  
+          &:disabled {
+            color: $white;
+            background: $light-grey;
+            cursor: not-allowed;
+          }
+  
+        }
+
+        .cancel-post {
+          background: $accent-tertiary;
         }
 
       }

@@ -57,11 +57,16 @@
           <textarea id="post-text" type="text" placeholder="Share your thoughts..." rows="3" cols="40"></textarea>
           <div class="post-form-control">
             <label for="image-file">Share an Image <i class="fa-solid fa-image"></i></label>
+            <section class="upload-notifications">
+              <div class="upload-success hidden">Image uploaded <i class="fa-regular fa-thumbs-up"></i></div>
+              <div class="upload-cancel hidden">Remove file<i class="fa-solid fa-square-xmark"></i></div>
+            </section>
             <input type="file" name="" id="image-file" hidden accept="image/*">
           </div>
-          <div class="preview-container">
+          <div class="upload-btns">
+            <input id="submitPostBtn" type="submit" form="post-form" value="Post" class="submitPostBtn" />
+            <button type="button" class="cancel-post">Cancel</button>
           </div>
-          <input id="submitPostBtn" type="submit" form="post-form" value="Post" class="submitPostBtn" />
         </form>
       </div>
     </section>
