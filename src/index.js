@@ -35,17 +35,17 @@ document.querySelector('#post-text').addEventListener('keypress', (e) => {
 
 
 // File upload
-const imageForm = document.querySelector('#image-upload')
-const uploadedImage = document.querySelector('#image-file')
+// const imageForm = document.querySelector('#image-upload')
+// const uploadedImage = document.querySelector('#image-file')
 
-const handleImageSubmit = (e) => {
-  e.preventDefault()
-  console.log(uploadedImage.value)
-  if(!uploadedImage.value) {
-    return
-  }
-}
-imageForm.addEventListener('submit', handleImageSubmit)
+// const handleImageSubmit = (e) => {
+//   e.preventDefault()
+//   console.log(uploadedImage.value)
+//   if(!uploadedImage.value) {
+//     return
+//   }
+// }
+// imageForm.addEventListener('submit', handleImageSubmit)
 
 
 
