@@ -125,6 +125,7 @@
     transform: translateX(-50%);
 
     width: 100%;
+    padding-top: rem(7);
     margin: rem(20) auto;
     margin-bottom: 0;
     border-top: rem(5) solid $accent-color;
@@ -147,6 +148,7 @@
         border-radius: rem(7);
         padding: rem(10);
         outline: none;
+        font-size: rem(16);
 
         &::placeholder {
           font-family: 'Poppins', sans-serif;
@@ -161,6 +163,7 @@
 
           &:hover {
             cursor: pointer;
+            color: $accent-secondary;
           }
 
           i {
@@ -188,7 +191,7 @@
         }
 
         &:disabled {
-          color: $black;
+          color: $white;
           background: $light-grey;
           cursor: not-allowed;
         }

@@ -195,6 +195,7 @@ document.querySelector('#post-form').addEventListener('submit', (e) => {
   // } else {
     UI.addPostToList(post)
     postInput.value = ''
+    str = ''
     postBtn.disabled = true
   // }
 })
