@@ -25,11 +25,27 @@ postBtn.addEventListener('click', (e) => {
   
 })
 
+// Post input check: making sure input is filled before post sumbmission
 postBtn.disabled = true
 document.querySelector('#post-text').addEventListener('keypress', (e) => {
-  console.log(e)
   postBtn.disabled = false
 })
+
+
+
+
+// File upload
+const imageForm = document.querySelector('#image-upload')
+const uploadedImage = document.querySelector('#image-file')
+
+const handleImageSubmit = (e) => {
+  e.preventDefault()
+  console.log(uploadedImage.value)
+  if(!uploadedImage.value) {
+    return
+  }
+}
+imageForm.addEventListener('submit', handleImageSubmit)
 
 
 
@@ -147,7 +163,6 @@ document.querySelector('#post-form').addEventListener('submit', (e) => {
 
   // New post object
   const post = new Post(id = 1, user = 'emiljoseph', text, imageFile='', postDate = currentDate)
-  console.log(post);
 
 
 
@@ -157,6 +172,7 @@ document.querySelector('#post-form').addEventListener('submit', (e) => {
   // } else {
     UI.addPostToList(post)
     postInput.value = ''
+    postBtn.disabled = true
   // }
 })
 

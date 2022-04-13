@@ -154,7 +154,7 @@
       border: rem(2) solid $accent-tertiary;
       border-radius: 50%;
       // padding: rem(10);
-      width: rem(40);
+      width: rem(50);
       margin-right: rem(10);
       overflow: hidden;
 
@@ -162,7 +162,7 @@
 
       @include flexCenter(row);
 
-      font-size: rem(20);
+      // font-size: rem(20);
 
       img {
         width: 100%;
@@ -173,15 +173,19 @@
       }
     }
 
-    form input {
-      width: rem(300);
+    form textarea {
+      width: 80%;
       max-width: 90%;
       flex: 1;
-      font-size: rem(14);
+      font-size: rem(18);
 
       background: transparent;
       border: none;
       outline: none;
+    }
+
+    form textarea::placeholder {
+      font-family: 'Poppins', sans-serif;
     }
   }
 
@@ -192,7 +196,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: rem(20);
+    padding: rem(7) rem(20);
 
     section {
       display: flex;
@@ -201,17 +205,28 @@
 
       div {
         margin-right: rem(40);
-        font-size: rem(25);
+        font-size: rem(20);
 
         &:hover {
           cursor: pointer;
           color: $accent-secondary;
         }
       }
+
+      #image-upload {
+        margin-right: rem(40);
+        font-size: rem(20);
+
+        label:hover {
+          cursor: pointer;
+          color: $accent-secondary;
+        }
+      }
+
     }
 
     .submitPostBtn {
-      padding: rem(10) rem(30);
+      padding: rem(7) rem(25);
 
       font-size: rem(16);
       color: $white;

@@ -58,14 +58,15 @@
           <img src="./assets/images/profile-pic.jpg" alt="">
         </button>
         <form id="post-form">
-          <input id="post-text" type="text" placeholder="Share your thoughts . . . . .">
+          <textarea id="post-text" type="text" placeholder="Share your thoughts..." rows="2" cols="40"></textarea>
         </form>
       </div>
       <div class="content__post--media">
         <section class="content__post--mediaSection">
-          <div class="image-upload">
-            <i class="fa-solid fa-image"></i>
-          </div>
+          <form class="image-upload" id="image-upload">
+            <label for="image-file"><i class="fa-solid fa-image"></i></label>
+            <input type="file" name="" id="image-file" hidden accept=""image/*>
+          </form>
           <div class="video-upload">
             <i class="fa-solid fa-video"></i>
           </div>
