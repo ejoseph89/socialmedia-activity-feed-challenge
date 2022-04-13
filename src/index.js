@@ -28,6 +28,15 @@ postBtn.addEventListener('click', (e) => {
 cancelPostBtn.addEventListener('click', (e) => {
   postModal.classList.add('hidden')
   const mainContent = document.querySelector('.content')
+
+  // 
+  postText.value = ''
+  str = ''
+  postBtn.disabled = true
+  cancelUpload.classList.add('hidden')
+  
+  uploadSuccessMsg.classList.add('hidden')
+  cancelUpload.classList.add('hidden')
   mainContent.scrollTo(0, 0)
 })
 
@@ -50,6 +59,7 @@ document.querySelector('#post-form').addEventListener('change', (e) => {
 // File upload
 const uploadedImageInput = document.querySelector('#image-file')
 const postForm = document.querySelector('#post-form')
+const postText = document.querySelector('#post-text')
 const previewContainer = document.querySelector('.preview-container')
 const uploadSuccessMsg = document.querySelector('.upload-success')
 const cancelUpload = document.querySelector('.upload-cancel')
@@ -58,9 +68,6 @@ uploadedImageInput.addEventListener('change', (e) => {
   // const file = e.target.files[0]
   
   uploadSuccessMsg.classList.remove('hidden')
-  // setTimeout(() => {
-  //   uploadSuccessMsg.classList.add('hidden')
-  // }, 2500);
   cancelUpload.classList.remove('hidden')
   if(!uploadedImageInput.value.length) {
     uploadSuccessMsg.classList.add('hidden')
@@ -115,15 +122,15 @@ class UI {
       {
         id: 2,
         user: 'user2',
-        text: '',
-        imageFile: 'https://images.unsplash.com/photo-1649700024661-d652b78f1bcf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+        text: "It is not enough that we build products that function, that are understandable and usable, we also need to build products that bring joy and excitement, pleasure and fun, and, yes, beauty to people's lives. - Don Norman",
+        imageFile: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
         postDate: 'April 3, 2021'
       },
       {
         id: 3,
         user: 'user2',
-        text: 'Whoa',
-        imageFile: 'https://images.unsplash.com/photo-1649716729285-689bee1d47de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80',
+        text: "",
+        imageFile: 'https://aliciaeggert.com/imgs/pages/thispresentmoment1.jpg',
         postDate: 'April 7, 2021'
       },
       {
