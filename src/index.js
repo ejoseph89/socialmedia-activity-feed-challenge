@@ -9,6 +9,28 @@ const currentDate = `${month} ${day}, ${year}`
 
 
 
+// Post Modal Features
+// Toggle post modal
+const postModal = document.querySelector('.content__post')
+const openPostModal = document.querySelector('.footer__nav--post')
+const postBtn = document.querySelector('#submitPostBtn')
+
+
+const toggleModal = () => {
+  postModal.classList.toggle('hidden')
+}
+openPostModal.addEventListener('click', toggleModal)
+postBtn.addEventListener('click', (e) => {
+  postModal.classList.add('hidden')
+  
+})
+
+postBtn.disabled = true
+document.querySelector('#post-text').addEventListener('keypress', (e) => {
+  console.log(e)
+  postBtn.disabled = false
+})
+
 
 
 // Post Class
@@ -130,8 +152,12 @@ document.querySelector('#post-form').addEventListener('submit', (e) => {
 
 
   // Add post to post list
-  UI.addPostToList(post)
-  postInput.value = ''
+  // if(text.length === 0 && post.imageFile === '') {
+    // alert('Please make a post')
+  // } else {
+    UI.addPostToList(post)
+    postInput.value = ''
+  // }
 })
 
 
@@ -141,18 +167,6 @@ document.querySelector('#post-form').addEventListener('submit', (e) => {
 
 
 
-// Post Modal Features
-// Toggle post modal
-const postModal = document.querySelector('.content__post')
-const openPostModal = document.querySelector('.footer__nav--post')
-const postBtn = document.querySelector('#submitPostBtn')
 
-const toggleModal = () => {
-  postModal.classList.toggle('hidden')
-}
-openPostModal.addEventListener('click', toggleModal)
-postBtn.addEventListener('click', (e) => {
-  postModal.classList.add('hidden')
-  
-})
+
 

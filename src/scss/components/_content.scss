@@ -210,7 +210,7 @@
       }
     }
 
-    input[type="submit"] {
+    .submitPostBtn {
       padding: rem(10) rem(30);
 
       font-size: rem(16);
@@ -222,6 +222,11 @@
       &:hover {
         background: $accent-tertiary;
         cursor: pointer;
+      }
+
+      &:disabled {
+        background: $light-grey;
+        cursor: not-allowed;
       }
 
       
